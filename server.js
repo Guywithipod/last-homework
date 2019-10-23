@@ -1,14 +1,18 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const mongoose = require("mongoose");
-app.use(express.static(path.join(__dirname, "../client/build")));
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+  }
 
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
-app.use(routes);
-
+// app.use(routes);
+app.use("*", (req, res) =>
+ res.sendFile(path.join(__dirname, "../client/build/index.html"))
+);
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/last-homework";
 
