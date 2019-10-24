@@ -15,7 +15,7 @@ const toolbar = props => (
             <div className="toolbar-nav-items">
                 {/* consider using router here */}
                 <ul>
-                    <li> <a href="/"> contact us </a></li>
+                    <li> <a href="/contactUs"> contact us </a></li>
                 </ul>
             </div>
         </nav>
