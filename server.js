@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const mongoose = require("mongoose");
-const require = ("routes/api");
+const require = ("./routes");
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
