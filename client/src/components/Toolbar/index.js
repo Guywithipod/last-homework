@@ -8,9 +8,9 @@ const toolbar = props =>(
    <header className="toolbar">
        <nav className="toolbar-nav">
            <div>
-               <DrawerToggleButton />
+               <DrawerToggleButton click={props.drawerClickHandler}/>
            </div>
-           <div className="toolbar-logo"><a href ="/"> the logo </a> </div>
+           <div className="toolbar-logo"><a href ="/"> The logo </a> </div>
            <div className = "spacer"> </div>
            <div className="toolbar-nav-items">
                {/* consider using router here */}
