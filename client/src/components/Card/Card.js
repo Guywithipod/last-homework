@@ -1,16 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types"
 
-const Card = ({property}) => {
+
+const card = ({property}) => {
     let picture;
 
    return(
         <div className="main container">
-            <img src={picture} alt ="picture" />
+            <img src={picture} alt =""/>
             <div className = "details"/>
-            <div className = "photo"/>
+            {property}
             </div>
    )
 };
 
-export default Card;
+export default card;
