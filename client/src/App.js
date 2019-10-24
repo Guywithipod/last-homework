@@ -1,24 +1,23 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+import React, { Component } from 'react';
+import Toolbar from "./components/Toolbar"
+import SideDrawer from "./components/SideDrawer/SideDrawer";
+import BackDrop from "./components/BackDrop/BackDrop"
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Nav />
-        <Switch>
-          <Route exact path="/" component={Books} />
-          <Route exact path="/books" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
-          <Route component={NoMatch} />
-        </Switch>
-      </div>
-    </Router>
-  );
+
+class App extends Component {
+  render() {
+    
+    return (
+      <div style = {{ height: "100%"}}>
+        <Toolbar/>
+        <SideDrawer/>
+        <BackDrop/>
+        <main style = {{
+          marginTop: "110px"
+        }}> <p> This is the page content</p> </main>
+        
+        </div>
+    );
+  }
 }
-
 export default App;
