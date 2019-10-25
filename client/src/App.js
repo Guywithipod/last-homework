@@ -24,7 +24,6 @@ class App extends Component {
   }
   render() {
     const defaultMarginTop = '110px'
-    let property;
     let backDrop;
     if (this.state.sideDrawerOpen) {
       backDrop = <BackDrop click={this.backDropClickHandler} />
@@ -39,14 +38,14 @@ class App extends Component {
 
         </div>
         <Switch>
-          <Route path="/retainingWalls" render={(props) => <Wrapper {...props} property={"retain"} marginTop={defaultMarginTop} />} />
-          <Route path="/patios" render={(props) => <Wrapper {...props} property={"patio"} marginTop={defaultMarginTop} />} />
-          <Route path="/pavers" render={(props) => <Wrapper {...props} property={"pavers"} marginTop={defaultMarginTop} />} />
-          <Route path="/decks" render={(props) => <Wrapper {...props} property={"deck"} marginTop={defaultMarginTop} />} />
-          <Route path="/cement" render={(props) => <Wrapper {...props} property={"cement"} marginTop={defaultMarginTop} />} />
-          <Route path="/seasonalflowerdecor" render={(props) => <Wrapper {...props} property={"seasonal"} marginTop={defaultMarginTop} />} />
-          <Route path="/sod" render={(props) => <Wrapper {...props} property={"sod"} marginTop={defaultMarginTop} />} />
-          <Route path="/contactus" render={(props) => <Wrapper {...props} property={"contactUs"} marginTop={defaultMarginTop} render={(props) => <ContactUs {...props} />} />} />
+          <Route path="/retainingWalls" render={(props) => <Wrapper {...props} property={"Walls"} marginTop={defaultMarginTop} />} />
+          <Route path="/patios" render={(props) => <Wrapper {...props} property={"Patios"} marginTop={defaultMarginTop} />} />
+          <Route path="/pavers" render={(props) => <Wrapper {...props} property={"Pavers"} marginTop={defaultMarginTop} />} />
+          <Route path="/decks" render={(props) => <Wrapper {...props} property={"Decks"} marginTop={defaultMarginTop} />} />
+          <Route path="/cement" render={(props) => <Wrapper {...props} property={"Cement"} marginTop={defaultMarginTop} />} />
+          <Route path="/seasonalflowerdecor" render={(props) => <Wrapper {...props} property={"Seasonal"} marginTop={defaultMarginTop} />} />
+          <Route path="/sod" render={(props) => <Wrapper {...props} property={"Sod"} marginTop={defaultMarginTop} />} />
+          <Route path="/contactus" render={(props) => <Wrapper {...props} property={"ContactUs"} marginTop={defaultMarginTop} render={(props) => <ContactUs {...props} />} />} />
         </Switch>
       </Router>
     );
