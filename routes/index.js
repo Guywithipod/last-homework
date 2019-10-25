@@ -2,8 +2,7 @@ const db = require('../models');
 const express = require("express");
 
 
-module.exports = () => {
-    const app = express();
+module.exports = (app) => {
 
     app.get("/", (res, req) => {
         console.log("route hit")
@@ -22,8 +21,10 @@ module.exports = () => {
 
     app.post("/api/submit", function(req, res) {
         // Create a new Customers in the database
+        console.log('api/submit -- hit')
         db.Customers.create(req.body)
           .then(function(dbCustomers) {
+            console.log(dbCustomers)
             return db.Library.findOneAndUpdate({}, { $push: { Customers: dbCustomers._id } }, { new: true });
           })
           .then(function(dbLibrary) {

@@ -2,6 +2,7 @@ import React from "react";
 
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton"
 import "./Toolbar.css";
+import {Link} from 'react-router-dom';
 
 
 const toolbar = props => (
@@ -15,7 +16,7 @@ const toolbar = props => (
             <div className="toolbar-nav-items">
                 {/* consider using router here */}
                 <ul>
-                    <li> <a href="/contactUs"> contact us </a></li>
+                    <li> <Link to={'contactUs'}> contact us </Link></li>
                 </ul>
             </div>
         </nav>

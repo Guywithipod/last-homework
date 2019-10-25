@@ -1,16 +1,16 @@
 import React from "react";
+import {imageMap} from '../../shared';
 
 
-const card = ({property}) => {
-    let picture;
+const Card = ({property}) => {
 
    return(
         <div className="main container">
-            <img src={picture} alt =""/>
+            <img src={imageMap[property]} alt =""/>
             <div className = "details"/>
             {property}
             </div>
    )
 };
 
-export default card;
+export default Card;
