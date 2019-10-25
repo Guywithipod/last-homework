@@ -5,6 +5,7 @@ import SideDrawer from "./components/SideDrawer/SideDrawer";
 import BackDrop from "./components/BackDrop/BackDrop"
 import Wrapper from './components/Wrapper';
 import ContactUs from './components/ContactUs';
+// import { Input, TextArea, FormBtn } from "./components/Form";
 
 class App extends Component {
   state = {
@@ -38,6 +39,7 @@ class App extends Component {
 
         </div>
         <Switch>
+        <Route path="/Home" render={(props) => <Wrapper {...props} property={"Home"} marginTop={defaultMarginTop} />} />
           <Route path="/retainingWalls" render={(props) => <Wrapper {...props} property={"Walls"} marginTop={defaultMarginTop} />} />
           <Route path="/patios" render={(props) => <Wrapper {...props} property={"Patios"} marginTop={defaultMarginTop} />} />
           <Route path="/pavers" render={(props) => <Wrapper {...props} property={"Pavers"} marginTop={defaultMarginTop} />} />
@@ -45,7 +47,7 @@ class App extends Component {
           <Route path="/cement" render={(props) => <Wrapper {...props} property={"Cement"} marginTop={defaultMarginTop} />} />
           <Route path="/seasonalflowerdecor" render={(props) => <Wrapper {...props} property={"Seasonal"} marginTop={defaultMarginTop} />} />
           <Route path="/sod" render={(props) => <Wrapper {...props} property={"Sod"} marginTop={defaultMarginTop} />} />
-          <Route path="/contactus" render={(props) => <Wrapper {...props} property={"ContactUs"} marginTop={defaultMarginTop} render={(props) => <ContactUs {...props} />} />} />
+          <Route path="/contactUs" render={(props) => <Wrapper {...props} property={"ContactUs"} marginTop={defaultMarginTop} render={(props) => <ContactUs {...props} />} />} />
         </Switch>
       </Router>
     );

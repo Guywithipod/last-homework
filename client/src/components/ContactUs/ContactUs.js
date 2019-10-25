@@ -1,5 +1,9 @@
 import React, {  useEffect, useState } from 'react';
 import axios from 'axios';
+import { Input, TextArea, FormBtn } from "../Form/index";
+
+
+
 
 const ContactUs = props => {
     useEffect(()=> {
@@ -11,13 +15,21 @@ const ContactUs = props => {
         })
         .then(response =>{
             console.log(response);
+            
         })
         .catch(err => {
             console.log(err);
         })
     }, []);
+
     return (
-      <div>Contact Us Working</div>
+      <div> 
+            <Input />
+            <TextArea />
+            <FormBtn />   
+      
+      
+        </div>
     )
   }
 

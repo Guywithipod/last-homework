@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../Card';
 import "./wrapper.css"
 
-const Wrapper = ({marginTop, property, render}) => (
+const Wrapper = ({marginTop, property, render, info}) => (
 <div>
     <main style={{
       marginTop
