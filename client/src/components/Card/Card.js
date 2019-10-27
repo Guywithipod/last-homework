@@ -12,10 +12,10 @@ const Card = ({property}) => {
            <div className = "main-container">
             {imageMap[property] && <img  class = "img" src={imageMap[property]} alt =""/>}
             <div className = "details"/>
-            {detailsMap [property]}
+            {detailsMap[property]}
             <br/>
             <br/>
-             {moreDetailsMap [property]}
+             {moreDetailsMap[property]}
             </div>
             
             </div>

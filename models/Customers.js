@@ -16,8 +16,8 @@ const customersSchema = new Schema({
     },
     description:{
         type: String,
-    },
-    date: { type: Date, default: Date.now }
+    }
+    
 });
 
 const Customers = mongoose.model("Customers", customersSchema);
