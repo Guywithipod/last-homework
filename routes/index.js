@@ -1,13 +1,9 @@
 const db = require('../models');
-const express = require("express");
 
 
 module.exports = (app) => {
 
-    app.get("/", (res, req) => {
-        console.log("route hit")
-    });
-
+    
 
     db.Library.create({ name: "Customer Library" })
     .then(function(dbLibrary) {
